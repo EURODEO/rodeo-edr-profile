@@ -16,6 +16,8 @@ We want as few profiles as possible. However, if there is a need for more than o
 
 The work is 100% open source and the goal is to have a community driven effort that can be used by everyone.
 
+Lastly, we want to make the job of implementing clients and servers as simple as possible, and the profile and supporting tools should help with this.
+
 ## Roadmap
 
 A tentative plan for what to do when.
@@ -25,6 +27,8 @@ A tentative plan for what to do when.
 Define the profile needs for meteorological ground observations data. Possible as a separate profile.
 
 First, we want to tackle the metadata about parameters, units and coordinate systems, e.g decide on which vocabularies to use.
+
+Secondly, how to map observations into collections? One collection pr. country, one pr. station? Or rather pr. parameter or pr. data type (core / recommended etc.)?
 
 Then, work more directly on the OpenAPI specification, with things like:
 
