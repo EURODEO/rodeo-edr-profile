@@ -16,7 +16,7 @@ We want as few profiles as possible. However, if there is a need for more than o
 
 The work is 100% open source and the goal is to have a community driven effort that can be used by everyone.
 
-Lastly, we want to make the job of implementing clients and servers as simple as possible, and the profile and supporting tools should help with this.
+Lastly, we want to make the job of implementing clients and servers compliant with the profile as simple as possible, and tools, examples reference implementations should help with this.
 
 ## Roadmap
 
@@ -24,18 +24,26 @@ A tentative plan for what to do when.
 
 ### Starting august 2024: Observations data
 
-Define the profile needs for meteorological ground observations data. Possible as a separate profile.
+Define the profile needs for meteorological ground observations data.
 
-First, we want to tackle the metadata about parameters, units and coordinate systems, e.g decide on which vocabularies to use.
+Work roughly in this order:
 
-Secondly, how to map observations into collections? One collection pr. country, one pr. station? Or rather pr. parameter or pr. data type (core / recommended etc.)?
+0. Create a rough set of annotated examples of `/collections` and data query response, to document how responses from a compliant service will look.
 
-Then, work more directly on the OpenAPI specification, with things like:
+1. We want to tackle the metadata about parameters, units and coordinate systems, e.g decide on which vocabularies to use.
 
-- the details of the content of `/collections`.
-- which queries to support
-- response formats for the data queries.
+2. How to map observations into collections? One collection pr. country, one pr. station? Or rather pr. parameter or pr. data type (core / recommended etc.)?
 
-### Late 2024: Forecast data
+3. work more directly on the OpenAPI specification, with things like:
 
-Define the profile needs for meteorological weather forecast data. Possible as a separate profile.
+    - the details of the content of `/collections`.
+    - which queries to support
+    - response formats for the data queries.
+
+Lastly, there are some open questions about scope: Should the profile include constraints on how to publish metadata? E.g specific rules on using OGC-API Records to publish metadata about stations? Are there overlaps between the job of WIGOS and Oscar (WMDS, WMDR?) and this profile? Also, as a matter of practicality the profile needs to be built with some understanding of how WIS2 is implemented.
+
+### Late 2024: Forecast / radar / alerts / climate data?
+
+Define the profile needs for meteorological weather forecast data. Reuse as much of the observations data profile as possible. Go back and refactor observations profile if that is required.
+
+## Tools
