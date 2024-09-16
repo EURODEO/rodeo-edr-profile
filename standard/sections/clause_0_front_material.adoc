@@ -16,7 +16,7 @@ rodeo, eumetnet, ogc, api, edr, weather, meteorology, high value datasets
 
 No additional security considerations have been made for this standard.
 
-[big]*iii.    Submitters
+[big]*iii.    Submitters*
 
 All questions regarding this submission should be directed to the editor or the submitters:
 
