@@ -18,6 +18,8 @@ The work is 100% open source and the goal is to have a community driven effort t
 
 Lastly, we want to make the job of implementing clients and servers compliant with the profile as simple as possible, and tools, examples reference implementations should help with this.
 
+## Tools
+
 ## Roadmap
 
 A tentative plan for what to do when.
@@ -46,4 +48,15 @@ Lastly, there are some open questions about scope: Should the profile include co
 
 Define the profile needs for meteorological weather forecast data. Reuse as much of the observations data profile as possible. Go back and refactor observations profile if that is required.
 
-## Tools
+## License
+
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
