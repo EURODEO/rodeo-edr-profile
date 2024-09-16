@@ -1,0 +1,12 @@
+== References
+
+* [[ogcapi-edr]] OGC: OGC 19-086r6, OGC API - Environmental Data Retrieval Standard - Part 1: Core (2023) footnote:[https://docs.ogc.org/is/19-086r6/19-086r6.html]
+* [[ogc-covjson]] OGC: OGC 21-069r2, OGC CoverageJSON Community Standard (2023) footnote:[https://docs.ogc.org/cs/21-069r2/21-069r2.html]
+* [[rfc7946]] IETF: RFC-7946 The GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc7946]
+* [[rfc8259]] IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Format (2017) footnote:[https://datatracker.ietf.org/doc/html/rfc8259]
+* W3C/OGC: Spatial Data on the Web Best Practices, W3C Working Group Note (2017) footnote:[https://www.w3.org/TR/sdw-bp]
+* W3C: Data on the Web Best Practices, W3C Recommendation (2017) footnote:[https://www.w3.org/TR/dwbp]
+* IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
+* IANA: Media Types (2023) footnote:[https://www.iana.org/assignments/media-types/media-types.xhtml]
+* [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
+* [[openapi]] OpenAPI Specification 3.1.0 (2022) footnote:[https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md]

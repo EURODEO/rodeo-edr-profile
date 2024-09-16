@@ -1,4 +1,6 @@
-# EDR-profiles
+[![Build Status](https://github.com/EURODEO/rodeo-edr-profile/workflows/build%20specification/badge.svg)](https://github.com/EURODEO/rodeo-edr-profile/actions/workflows/main.yml)
+
+# RODEO EDR Profile
 
 ## Purpose
 

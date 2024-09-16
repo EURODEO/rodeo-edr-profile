@@ -1,0 +1,25 @@
+== Conventions
+
+This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of JSON and / or JSON schema, or special notes regarding how to read the document.
+
+=== Identifiers
+
+The normative provisions in this Standard are denoted by the URI:
+
+https://rodeo-project.eu/spec/rodeo-edr-profile/1
+
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+
+=== Examples
+
+Examples provided in this specification are encoded as JSON, GeoJSON or CoverageJSON.
+
+=== Schema representation
+
+JSON Schema footnote:[https://json-schema.org] objects are used throughout this standard to define the structure
+of metadata records. These schema objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
+YAML is a superset of JSON, and in this standard are regarded as equivalent.
+
+=== Use of HTTPS
+
+For simplicity, this document only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS." In fact, most servers are expected to use HTTPS, not HTTP.

@@ -1,0 +1,26 @@
+[big]*i.     Abstract*
+
+The Open Geospatial Consortium (OGC) Environmental Data Retrieval (EDR) API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. OGC API - EDR identifies resources, captures compliance classes, and specifies requirements which are applicable to OGC Environmental Data Retrieval API’s. The specification addresses two fundamental operations; discovery and query. Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about this distribution of a resource. This includes the API definition of the server as well as metadata about the Environmental Data resources provided by the server. Query operations allow Environmental Data resources to be retrieved from the underlying data store based upon simple selection criteria, defined by this standard and selected by the client.
+
+The flexibility of EDR allows for implementation in various environmental domains and communities of practice.
+
+This document defines an EDR profile in support of providing access to meteorological datasets in the RODEO project.  This includes, but is not limited to, conventions and constraints on identifiers, metadata parameters and encodings/formats and their related definitions and extensions.
+
+[big]*ii.    Keywords*
+
+The following are keywords to be used by search engines and document catalogues.
+
+rodeo, eumetnet, ogc, api, edr, weather, meteorology, high value datasets
+
+[big]*iii.    Security Considerations*
+
+No additional security considerations have been made for this standard.
+
+[big]*iii.    Submitters
+
+All questions regarding this submission should be directed to the editor or the submitters:
+
+|===
+^|Name  ^|Affiliation
+| Tom Kralidis (editor) | Meteorological Service of Canada
+|===

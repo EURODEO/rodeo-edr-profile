@@ -1,0 +1,6 @@
+[[req_core_collection_identifiers]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_identifiers*
+^|A |A collection identifier SHALL be formatted in the following notation: TBD.
+|===

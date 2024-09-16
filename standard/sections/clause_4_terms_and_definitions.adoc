@@ -1,0 +1,99 @@
+== Terms and definitions
+
+This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “SHALL” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this Standard and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+The following additional terms and definitions also apply.
+
+=== Abbreviated terms
+
+.Symbols and abbreviated terms
+|===
+|Abbreviation |Term
+
+|API
+|Application Programming Interface
+
+|EU
+|European Union
+
+|EUMETNET
+|European National Meteorological and Hydrological Services
+
+|FAIR
+|Findable, Accessible, Interoperable, Reusable
+
+|FEMDI
+|Federated European Meteo-hydrological Data Infrastructure
+
+|GIS
+|Geographic Information System
+
+|HVD
+|High Value Datasets
+
+|HTML
+|Hypertext Markup Language
+
+|HTTP
+|Hypertext Transfer Protocol
+
+|HTTPS
+|Hypertext Transfer Protocol Secure
+
+|IANA
+|Internet Assigned Numbers Authority
+
+|IETF
+|Internet Engineering Task Force
+ 
+|ISO
+|International Organization for Standardization
+
+|JSON
+|JavaScript Object Notation
+
+|MIME
+|Multipurpose Internet Mail Extensions
+
+|NMHS
+|National Meteorological and Hydrological Service
+
+|NWP
+|Numerical Weather Prediction
+
+|OGC
+|Open Geospatial Consortium
+
+|REST
+|Representational State Transfer
+
+|ROA
+|Resource-oriented architecture
+
+|RODEO
+|The provision of open access to public meteorological data and development of shared federated data infrastructure for the development of information products and services
+
+|S3
+|Simple Storage Service
+
+|SEO
+|Search engine optimization
+
+|SOA
+|Service-oriented architecture
+
+|URI
+|Uniform Resource Identifier
+
+|URL
+|Uniform Resource Locator
+
+|W3C
+|World Wide Web Consortium
+
+|XML
+|eXtensible Markup Language
+
+|===

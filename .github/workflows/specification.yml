@@ -1,0 +1,46 @@
+name: build specification
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'standard/**'
+
+env:
+  SPEC_FILE_BASENAME: rodeo-edr-profile-DRAFT
+
+jobs:
+  build-rodeo-edr-profile:
+    name: Generate documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y \
+          && sudo apt-get install -y pandoc \
+          && sudo gem install asciidoctor asciidoctor-pdf
+      - name: checkout repository
+        uses: actions/checkout@master
+      - name: build specification
+        run: |
+          mkdir -p /tmp/rodeo-edr-profile/standard/images \
+          && cd standard \
+          && asciidoctor --trace -o /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
+          && cp images/*.png /tmp/rodeo-edr-profile/standard/images \
+          && cd ..
+      - name: checkout gh-pages branch
+        uses: actions/checkout@master
+        with:
+          ref: gh-pages
+      - name: update gh-pages branch and publish
+        run: | 
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          rm -rf standard
+          mv -f /tmp/rodeo-edr-profile/* .
+          git add .
+          git commit -am "update rodeo-edr-profile build"
+          git push
