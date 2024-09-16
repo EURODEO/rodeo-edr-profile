@@ -1,0 +1,6 @@
+[[examples]]
+[appendix]
+:appendix-caption: Annex
+== Examples (Informative)
+
+=== Examples

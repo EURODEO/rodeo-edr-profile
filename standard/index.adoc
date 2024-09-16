@@ -1,0 +1,60 @@
+:title: RODEO EDR Profile
+:titletext: {title}
+:version: 0.1.0
+:date: {docdate}
+:copyright: Copyright © 2024 RODEO project
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc:
+:toc-placement!:
+:toclevels: 3
+:sectnums:
+:sectnumlevels: 4
+:sectanchors:
+
+= {title}
+
+<<<
+[cols = "<",frame = "none",grid = "none"]
+|===
+|{set:cellbgcolor:#FFFFFF}
+|[big]*The provision of Open Access to Public meteorological Data and Development of Shared federated Data Infrastructure for the Development of information Products and Services*
+|Date: {docdate}
+|Version: {version}
+|Document location: TBD
+|Document status: DRAFT
+|RODEO project partnersfootnote:[https://rodeo-project.eu/partners/#project-partners]
+|{copyright}
+|===
+
+<<<
+toc::[]
+<<<
+
+
+include::sections/clause_0_front_material.adoc[]
+
+include::sections/clause_1_scope.adoc[]
+
+include::sections/clause_2_conformance.adoc[]
+
+include::sections/clause_3_references.adoc[]
+
+include::sections/clause_4_terms_and_definitions.adoc[]
+
+include::sections/clause_5_conventions.adoc[]
+
+include::sections/clause_6_informative_text.adoc[]
+
+include::sections/clause_7_core.adoc[]
+
+include::sections/annex_a_ats.adoc[]
+
+include::sections/annex_b_schemas.adoc[]
+
+include::sections/annex_c_examples.adoc[]
+
+include::sections/annex_e_bibliography.adoc[]
+
+include::sections/annex_f_revision_history.adoc[]

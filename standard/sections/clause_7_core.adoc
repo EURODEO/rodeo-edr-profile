@@ -1,0 +1,11 @@
+== Core
+
+=== Requirements Class "Core"
+
+include::../requirements/requirements_class_core.adoc[]
+
+=== Collection identifiers
+
+Collection identifiers provide a mechanism to uniquely identify a given collection in an OGC API.
+
+include::../requirements/core/REQ_collection_identifiers.adoc[]
