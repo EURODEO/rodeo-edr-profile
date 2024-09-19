@@ -2,6 +2,69 @@
 
 ## Annotated examples of how responses from a profile compliant service will look
 
+### /
+
+Annotated example of a landinpage response that complies with the profile
+
+```json
+{
+  "title": "E-SOH EDR API",
+  "description": "The E-SOH EDR API",
+  "links": [
+    {
+      "href": "https://api.esoh.met.no/",
+      "rel": "self",
+      "type": "application/json",
+      "title": "Landing Page in JSON"
+    },
+    {
+      "href": "https://api.esoh.met.no/docs",
+      "rel": "service-doc",
+      "type": "text/html",
+      "title": "API description in HTML"
+    },
+    // Landingpage SHALL have a link to openapi describing the service.
+    // Note: Each "service" pr. openapi? MIME type for openapi.
+    {
+      "href": "https://api.esoh.met.no/openapi.json",
+      "rel": "service-desc",
+      "type": "application/json",
+      "title": "API description in JSON"
+    },
+
+    // Conformance response SHALL have uri to RODEO profile. 
+    // Note: Add an conformance response example with this rule.
+    {
+      "href": "https://api.esoh.met.no/conformance",
+      "rel": "conformance",
+      "type": "application/json",
+      "title": "Conformance Declaration in JSON"
+    },
+    {
+      "href": "https://api.esoh.met.no/collections",
+      "rel": "data",
+      "title": "Collections metadata in JSON"
+    }
+  ],
+  "keywords": [
+    "weather",
+    "temperature",
+    "wind",
+    "humidity",
+    "pressure",
+    "clouds",
+    "radiation"
+  ],
+  "provider": {
+    "name": "RODEO",
+    "url": "https://rodeo-project.eu/"
+  },
+  "contact": {
+    "email": "rodeoproject@fmi.fi"
+  }
+}
+```
+
 ### /collections
 
 Annotated example of a collection that complies with the profile
@@ -16,9 +79,15 @@ Annotated example of a collection that complies with the profile
     ],
     "collections": [
       {
-        // Uniquely identify the collection within the scope of ....Assume no structured data in the string.
+        // Uniquely identify the collection within the scope of the service. Assume no structured data in the string.
+        // Alt1: WIS 2 topic notation? weather.surfaceobservations., weather.prediction.,
+        // Alt2: Reverse hostname notation?
+        // Alt3: Rodeo specific naming scheme? rodeo.surfaceobservations
+        // Alt4: WIGOS?
+        // Alt5: "surfaceobservations", enumerated list of allowed values.
         "id": "observations",
-        // Use title to list the collection in a UI.
+        // Title SHALL be in a collection. Title SHALL have a maximum length of X words and be human readable. 
+        // Note: Acronyms, minimum length? UTF-8? Language?
         "title": "Observations from E-SOH",
         "links": [
           {

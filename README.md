@@ -14,13 +14,20 @@ Build an OpenAPI specification for each profile, along with human readable docum
 
 The OpenAPI specification can be used to validate that a service is compliant with the profile. It could potentially also be used to generate client and server code in multiple programming languages.
 
-We want as few profiles as possible. However, if there is a need for more than one meteorological EDR profile, it probably makes sense to make separate profiles based on the data type, e.g observations, forecasts, radar etc.
+We plan to build a set of profiles roughly mirroring the data types handled by the [RODEO project](https://rodeo-project.eu/): That is, a separate profile for:
+
+- observations / climate data
+- radar
+- warnings
 
 The work is 100% open source and the goal is to have a community driven effort that can be used by everyone.
 
-Lastly, we want to make the job of implementing clients and servers compliant with the profile as simple as possible, and tools, examples reference implementations should help with this.
+Lastly, we want to make the job of implementing clients and servers compliant with the profile as simple as possible. Hence, we plan to build supporting validation tools and link to examples of clients and servers.
 
-## Tools
+## Links
+
+### 
+
 
 ## Roadmap
 
