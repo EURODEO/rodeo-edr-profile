@@ -1,0 +1,10 @@
+[[req_core_title]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_titles*
+^|A |A title SHALL be set for all collections.
+^|B |A title SHALL NOT have more than 50 characters.
+^|C |A title SHOULD be written in English.
+^|D |A title SHOULD have the most important information first, guarding against truncated presentation of the value.
+^|E |A title SHOULD describe the collection in a way understandable also for non-experts. Usually mention both topic/domain and geographical area.
+|===

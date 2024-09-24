@@ -9,3 +9,9 @@ include::../requirements/requirements_class_core.adoc[]
 Collection identifiers provide a mechanism to uniquely identify a given collection in an OGC API.
 
 include::../requirements/core/REQ_collection_identifiers.adoc[]
+
+=== Collection titles
+
+Collection title provides a human readable short description of the given collection.
+
+include::../requirements/core/REQ_collection_titles.adoc[]
