@@ -1,8 +1,8 @@
-[[ats_core_collection_titles]]
+[[ats_core_collection_title]]
 ====
 [%metadata]
-label:: /conf/core/collection_titles
-subject:: /req/core/collection_titles
+label:: /conf/core/collection_title
+subject:: /req/core/collection_title
 test-purpose:: Validate that a RODEO EDR Profile provides a valid collection title
 
 [.component,class=test method]
