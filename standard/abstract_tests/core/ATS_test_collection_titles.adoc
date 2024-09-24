@@ -3,14 +3,14 @@
 [%metadata]
 label:: /conf/core/collection_titles
 subject:: /req/core/collection_titles
-test-purpose:: Validate that a RODEO EDR Profile provides a valid collection identifier
+test-purpose:: Validate that a RODEO EDR Profile provides a valid collection title
 
 [.component,class=test method]
 =====
 
 [.component,class=step]
 --
-Issue an HTTP GET request to path /collections.
+Issue an HTTP GET request to path `/collections`.
 --
 
 [.component,class=step]
@@ -20,7 +20,7 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-In the ``collections`` array, check that the `title` property is present for all array elements.
+In the `collections` array, check that the `title` property is present for all array elements.
 --
 
 [.component,class=step]
