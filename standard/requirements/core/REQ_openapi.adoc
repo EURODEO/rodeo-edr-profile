@@ -1,0 +1,8 @@
+[[req_core_openapi]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/openapi*
+^|A |A WebAPI SHALL be described with an OpenAPI specification of version 3.0.3 or higher.
+^|B |The openapi specification SHALL be formatted as a json file.
+^|C |The openapi specification SHALL be listed in `links` on the landingpage with `rel` `service-desc`.
+|===

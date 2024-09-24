@@ -9,3 +9,7 @@ classification:: Target Type:Web API
 ==== Collection identifiers
 
 include::./core/ATS_test_collection_identifiers.adoc[]
+
+==== OpenAPI
+
+include::./core/ATS_test_openapi.adoc[]
