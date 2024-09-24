@@ -503,16 +503,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_core">7. Core</a>
 <ul class="sectlevel2">
 <li><a href="#_requirements_class_core">7.1. Requirements Class "Core"</a></li>
-<li><a href="#_collection_identifiers">7.2. Collection identifiers</a></li>
-<li><a href="#_collection_titles">7.3. Collection titles</a></li>
+<li><a href="#_collection_identifier">7.2. Collection identifier</a></li>
+<li><a href="#_collection_title">7.3. Collection title</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_conformance_class_core">A.1. Conformance Class: Core</a>
 <ul class="sectlevel3">
-<li><a href="#_collection_identifiers_2">A.1.1. Collection identifiers</a></li>
-<li><a href="#_collection_titles_2">A.1.2. Collection titles</a></li>
+<li><a href="#_collection_identifier_2">A.1.1. Collection identifier</a></li>
+<li><a href="#_collection_title_2">A.1.2. Collection title</a></li>
 </ul>
 </li>
 </ul>
@@ -941,11 +941,11 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_collection_identifiers"><a class="anchor" href="#_collection_identifiers"></a>7.2. Collection identifiers</h3>
+<h3 id="_collection_identifier"><a class="anchor" href="#_collection_identifier"></a>7.2. Collection identifier</h3>
 <div class="paragraph">
-<p>Collection identifiers provide a mechanism to uniquely identify a given collection in an OGC API.</p>
+<p>A collection identifier provides a mechanism to uniquely identify a given collection in an OGC API.</p>
 </div>
-<table id="req_core_collection_identifiers" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_core_collection_identifier" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -954,7 +954,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/collection_identifiers</strong></p>
+<p><strong>/req/core/collection_identifier</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -967,11 +967,11 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_collection_titles"><a class="anchor" href="#_collection_titles"></a>7.3. Collection titles</h3>
+<h3 id="_collection_title"><a class="anchor" href="#_collection_title"></a>7.3. Collection title</h3>
 <div class="paragraph">
-<p>Collection title provides a human readable short description of the given collection.</p>
+<p>A collection title provides a human readable short description of the given collection.</p>
 </div>
-<table id="req_core_title" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_core_collection_title" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -980,7 +980,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/collection_titles</strong></p>
+<p><strong>/req/core/collection_title</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1044,18 +1044,18 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collection_identifiers_2"><a class="anchor" href="#_collection_identifiers_2"></a>A.1.1. Collection identifiers</h4>
-<div id="ats_core_collection_identifiers" class="exampleblock">
+<h4 id="_collection_identifier_2"><a class="anchor" href="#_collection_identifier_2"></a>A.1.1. Collection identifier</h4>
+<div id="ats_core_collection_identifier" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/core/collection_identifiers</p>
+<p>/conf/core/collection_identifier</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/core/collection_identifiers</p>
+<p>/req/core/collection_identifier</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -1120,18 +1120,18 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collection_titles_2"><a class="anchor" href="#_collection_titles_2"></a>A.1.2. Collection titles</h4>
-<div id="ats_core_collection_titles" class="exampleblock">
+<h4 id="_collection_title_2"><a class="anchor" href="#_collection_title_2"></a>A.1.2. Collection title</h4>
+<div id="ats_core_collection_title" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/core/collection_titles</p>
+<p>/conf/core/collection_title</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/core/collection_titles</p>
+<p>/req/core/collection_title</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -1299,7 +1299,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-24 10:50:10 UTC
+Last updated 2024-09-24 11:57:21 UTC
 </div>
 </div>
 </body>
