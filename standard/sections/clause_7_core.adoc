@@ -4,14 +4,14 @@
 
 include::../requirements/requirements_class_core.adoc[]
 
-=== Collection identifiers
+=== Collection identifier
 
-Collection identifiers provide a mechanism to uniquely identify a given collection in an OGC API.
+A collection identifier provides a mechanism to uniquely identify a given collection in an OGC API.
 
-include::../requirements/core/REQ_collection_identifiers.adoc[]
+include::../requirements/core/REQ_collection_identifier.adoc[]
 
-=== Collection titles
+=== Collection title
 
-Collection title provides a human readable short description of the given collection.
+A collection title provides a human readable short description of the given collection.
 
-include::../requirements/core/REQ_collection_titles.adoc[]
+include::../requirements/core/REQ_collection_title.adoc[]
