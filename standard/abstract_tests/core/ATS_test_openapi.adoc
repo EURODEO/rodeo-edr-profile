@@ -25,23 +25,34 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-In the ``links`` array, find the collections link identified with ``rel=service-desc``.
+In the `links` array in the landing page response, find the object with `rel` set to `service-desc`.
 --
 
 [.component,class=step]
 --
-Issue an HTTP GET request on that link.
+Issue an HTTP GET request using the value of `href` for that object.
 --
 
 [.component,class=step]
 --
-Check that the value of the returned HTTP status header is 200.
+Check that the value of the returned HTTP status header is 200 and check that the response body is a valid OpenAPI specification of version 3.1 or higher.
 --
 
 [.component,class=step]
 --
-Check that the response body is a valid OpenAPI specification of version 3.0.3 or higher.
+In the ``links`` array in the landing page response, find the object with `rel` set to `service-doc`.
 --
+
+[.component,class=step]
+--
+Issue an HTTP GET request using the value of `href` for that object.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200 and that the HTTP response header `Content-Type` contains `text/html`
+--
+
 =====
 
 ====
