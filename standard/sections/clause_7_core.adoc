@@ -4,15 +4,21 @@
 
 include::../requirements/requirements_class_core.adoc[]
 
-=== Collection identifiers
-
-Collection identifiers provide a mechanism to uniquely identify a given collection in an OGC API.
-
-include::../requirements/core/REQ_collection_identifiers.adoc[]
-
 === OpenAPI
 
 An OpenAPI specification provides machine-readable description of the WebAPI interface
 
 include::../requirements/core/REQ_openapi.adoc[]
+
+=== Collection identifier
+
+A collection identifier provides a mechanism to uniquely identify a given collection in an OGC API.
+
+include::../requirements/core/REQ_collection_identifier.adoc[]
+
+=== Collection title
+
+A collection title provides a human readable short description of the given collection.
+
+include::../requirements/core/REQ_collection_title.adoc[]
 

@@ -6,10 +6,14 @@ subject:: Requirements Class "core"
 classification:: Target Type:Web API
 ====
 
-==== Collection identifiers
-
-include::./core/ATS_test_collection_identifiers.adoc[]
-
 ==== OpenAPI
 
 include::./core/ATS_test_openapi.adoc[]
+
+==== Collection identifier
+
+include::./core/ATS_test_collection_identifier.adoc[]
+
+==== Collection title
+
+include::./core/ATS_test_collection_title.adoc[]
