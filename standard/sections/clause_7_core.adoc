@@ -6,7 +6,7 @@ include::../requirements/requirements_class_core.adoc[]
 
 === OpenAPI
 
-An OpenAPI specification provides machine-readable description of the WebAPI interface
+An OpenAPI specification provides a machine-readable description of the API interface
 
 include::../requirements/core/REQ_openapi.adoc[]
 
