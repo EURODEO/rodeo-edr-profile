@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">The provision of Open Access to Public meteorological Data and Development of Shared federated Data Infrastructure for the Development of information Products and Services</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-09-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-05</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.1.0</p></td>
@@ -503,16 +503,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_core">7. Core</a>
 <ul class="sectlevel2">
 <li><a href="#_requirements_class_core">7.1. Requirements Class "Core"</a></li>
-<li><a href="#_collection_identifier">7.2. Collection identifier</a></li>
-<li><a href="#_collection_title">7.3. Collection title</a></li>
+<li><a href="#_openapi">7.2. OpenAPI</a></li>
+<li><a href="#_collection_identifier">7.3. Collection identifier</a></li>
+<li><a href="#_collection_title">7.4. Collection title</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_conformance_class_core">A.1. Conformance Class: Core</a>
 <ul class="sectlevel3">
-<li><a href="#_collection_identifier_2">A.1.1. Collection identifier</a></li>
-<li><a href="#_collection_title_2">A.1.2. Collection title</a></li>
+<li><a href="#_openapi_2">A.1.1. OpenAPI</a></li>
+<li><a href="#_collection_identifier_2">A.1.2. Collection identifier</a></li>
+<li><a href="#_collection_title_2">A.1.3. Collection title</a></li>
 </ul>
 </li>
 </ul>
@@ -935,13 +937,57 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Pre-conditions</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The record conforms to OGC API - Environmental Data Retrieval - Part 1: Core, Requirements Class: Core and Requirements Class: Collections</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The API conforms to OGC API - Environmental Data Retrieval - Part 1: Core, Requirements Class: Core and Requirements Class: Collections</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_collection_identifier"><a class="anchor" href="#_collection_identifier"></a>7.2. Collection identifier</h3>
+<h3 id="_openapi"><a class="anchor" href="#_openapi"></a>7.2. OpenAPI</h3>
+<div class="paragraph">
+<p>An OpenAPI specification provides a machine-readable description of the API interface</p>
+</div>
+<table id="req_core_openapi" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/openapi</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>An API definition SHALL be described using an OpenAPI document (version 3.1 or higher).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The OpenAPI document SHALL be encoded as JSON.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The OpenAPI document SHALL be made available in the API Landing Page as a link object with a relation type of <code>service-desc</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>API documentation SHALL be made available in the API Landing Page as a link object with a relation type of <code>service-doc</code> and content type of <code>text/html</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_collection_identifier"><a class="anchor" href="#_collection_identifier"></a>7.3. Collection identifier</h3>
 <div class="paragraph">
 <p>A collection identifier provides a mechanism to uniquely identify a given collection in an OGC API.</p>
 </div>
@@ -952,7 +998,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/collection_identifier</strong></p>
 </div></div></td>
@@ -967,7 +1013,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_collection_title"><a class="anchor" href="#_collection_title"></a>7.3. Collection title</h3>
+<h3 id="_collection_title"><a class="anchor" href="#_collection_title"></a>7.4. Collection title</h3>
 <div class="paragraph">
 <p>A collection title provides a human readable short description of the given collection.</p>
 </div>
@@ -978,7 +1024,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/collection_title</strong></p>
 </div></div></td>
@@ -1044,7 +1090,97 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collection_identifier_2"><a class="anchor" href="#_collection_identifier_2"></a>A.1.1. Collection identifier</h4>
+<h4 id="_openapi_2"><a class="anchor" href="#_openapi_2"></a>A.1.1. OpenAPI</h4>
+<div id="ats_core_openapi" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/core/openapi</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/core/openapi</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a RODEO EDR Profile provides an API definition using an OpenAPI document</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Construct a path for a landing page.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request on that path.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>In the <code>links</code> array in the landing page response, find the object with <code>rel</code> set to <code>service-desc</code> and <code>type</code> set to <code>application/vnd.oai.openapi+json;version=3.1</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request using the value of <code>href</code> for that object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200 and check that the response body is a valid OpenAPI document of version 3.1 or higher.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>In the <code>links</code> array in the landing page response, find the object with <code>rel</code> set to <code>service-doc</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request using the value of <code>href</code> for that object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200 and that the HTTP response header <code>Content-Type</code> contains <code>text/html</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_collection_identifier_2"><a class="anchor" href="#_collection_identifier_2"></a>A.1.2. Collection identifier</h4>
 <div id="ats_core_collection_identifier" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -1120,7 +1256,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collection_title_2"><a class="anchor" href="#_collection_title_2"></a>A.1.2. Collection title</h4>
+<h4 id="_collection_title_2"><a class="anchor" href="#_collection_title_2"></a>A.1.3. Collection title</h4>
 <div id="ats_core_collection_title" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -1299,7 +1435,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-24 11:57:21 UTC
+Last updated 2024-10-05 04:05:50 UTC
 </div>
 </div>
 </body>
