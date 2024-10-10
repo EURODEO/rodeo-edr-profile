@@ -18,6 +18,6 @@ include::./core/ATS_test_collection_identifier.adoc[]
 
 include::./core/ATS_test_collection_title.adoc[]
 
-==== Collection links
+==== Collection license
 
-include::./core/ATS_test_collection_links.adoc[]
+include::./core/ATS_test_collection_license.adoc[]
