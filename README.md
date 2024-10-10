@@ -4,7 +4,7 @@
 
 ## Purpose
 
-The purpose of these EDR profiles is to constrain the OGC-API EDR standard such that clients can consume meteorological data from multiple EDR WebAPI services without having to write custom code for each of those WebAPIs.
+The purpose of these EDR profiles is to constrain the OGC-API EDR standard such that clients can consume meteorological data from multiple EDR API services without having to write custom code for each of those APIs.
 
 The profiles are meant to be used as described here: https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/404.
 

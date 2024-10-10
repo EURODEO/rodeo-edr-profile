@@ -1,0 +1,58 @@
+[[ats_core_openapi]]
+====
+[%metadata]
+label:: /conf/core/openapi
+subject:: /req/core/openapi
+test-purpose:: Validate that a RODEO EDR Profile provides an API definition using an OpenAPI document
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Construct a path for a landing page.
+--
+
+[.component,class=step]
+--
+Issue an HTTP GET request on that path.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+In the `links` array in the landing page response, find the object with `rel` set to `service-desc` and `type` set to `application/vnd.oai.openapi+json;version=3.1`.
+--
+
+[.component,class=step]
+--
+Issue an HTTP GET request using the value of `href` for that object.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200 and check that the response body is a valid OpenAPI document of version 3.1 or higher.
+--
+
+[.component,class=step]
+--
+In the ``links`` array in the landing page response, find the object with `rel` set to `service-doc`.
+--
+
+[.component,class=step]
+--
+Issue an HTTP GET request using the value of `href` for that object.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200 and that the HTTP response header `Content-Type` contains `text/html`.
+--
+
+=====
+
+====

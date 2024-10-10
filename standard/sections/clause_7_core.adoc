@@ -4,6 +4,12 @@
 
 include::../requirements/requirements_class_core.adoc[]
 
+=== OpenAPI
+
+An OpenAPI specification provides a machine-readable description of the API interface
+
+include::../requirements/core/REQ_openapi.adoc[]
+
 === Collection identifier
 
 A collection identifier provides a mechanism to uniquely identify a given collection in an OGC API.
@@ -16,8 +22,10 @@ A collection title provides a human readable short description of the given coll
 
 include::../requirements/core/REQ_collection_title.adoc[]
 
-=== Collection links
+=== Collection license
 
-Collection links provides a list of links related to the collection.
+A license describes the usage permissions for the data in a collection.
 
-include::../requirements/core/REQ_collection_links.adoc[]
+include::../requirements/core/REQ_collection_license.adoc[]
+
+
