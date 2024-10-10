@@ -10,10 +10,6 @@ classification:: Target Type:Web API
 
 include::./core/ATS_test_openapi.adoc[]
 
-==== Collection identifier
-
-include::./core/ATS_test_collection_identifier.adoc[]
-
 ==== Collection title
 
 include::./core/ATS_test_collection_title.adoc[]

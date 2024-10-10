@@ -2,5 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/collection_identifier*
-^|A |A collection identifier SHALL be formatted in the following notation: TBD.
+^|A |A collection identifier SHALL NOT be used to convey structured metadata.
+^|B |A collection identifier SHOULD use the following list of values, each suitable for a specific data type: insitu_observations, climate_data, radar_observations, weather_warnings, weather_forecast.
+^|C |The identifier string MAY if needed include a postfix to the values listed above.
 |===
