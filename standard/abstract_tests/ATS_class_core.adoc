@@ -13,3 +13,7 @@ include::./core/ATS_test_openapi.adoc[]
 ==== Collection title
 
 include::./core/ATS_test_collection_title.adoc[]
+
+==== Collection identifier
+
+include::./core/ATS_test_collection_identifier.adoc[]

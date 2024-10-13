@@ -21,4 +21,3 @@ include::../requirements/core/REQ_collection_identifier.adoc[]
 A collection title provides a human readable short description of the given collection.
 
 include::../requirements/core/REQ_collection_title.adoc[]
-

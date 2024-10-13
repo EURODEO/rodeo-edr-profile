@@ -1,0 +1,15 @@
+[[ats_core_collection_identifier]]
+====
+[%metadata]
+label:: /conf/core/collection_identifier
+subject:: /req/core/collection_identifier
+test-purpose:: Validate that a RODEO EDR Profile API provides a valid collection identifier
+
+[.component,class=test method]
+=====
+
+This requirement is not applicable to ATS testing.
+
+=====
+
+====
