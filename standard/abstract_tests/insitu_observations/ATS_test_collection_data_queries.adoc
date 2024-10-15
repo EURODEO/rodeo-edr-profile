@@ -1,0 +1,27 @@
+[[ats_insitu_observations_collection_data_queries]]
+====
+[%metadata]
+label:: /conf/insitu_observations/collection_data_queries
+subject:: /req/insitu_observations/collection_data_queries
+test-purpose:: Validate that a RODEO EDR Insitu observations Profile API has implemented the mandatory data queries.
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+In the `collections` array in the returned document, check that each collection has a `data_queries` array containing at least `area`, `locations` and `radius`.
+--
+
+=====
+
+====

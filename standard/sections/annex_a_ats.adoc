@@ -6,3 +6,7 @@
 
 include::../abstract_tests/ATS_class_core.adoc[]
 
+=== Conformance Class: Insitu observations
+
+include::../abstract_tests/ATS_class_insitu_observations.adoc[]
+

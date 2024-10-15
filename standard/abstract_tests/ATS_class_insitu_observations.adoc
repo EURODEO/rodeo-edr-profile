@@ -1,0 +1,11 @@
+[[ats_insitu_observations]]
+====
+[%metadata]
+label:: https://rodeo-project.eu/spec/rodeo-edr-profile/1/conf/insitu_observations
+subject:: Requirements Class "Insitu observations"
+classification:: Target Type:Web API
+====
+
+==== Collection data queries
+
+include::./insitu_observations/ATS_test_collection_data_queries.adoc[]
