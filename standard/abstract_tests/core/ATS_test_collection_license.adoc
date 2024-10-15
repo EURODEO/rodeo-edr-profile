@@ -1,0 +1,38 @@
+[[ats_core_collection_license]]
+====
+[%metadata]
+label:: /conf/core/collection_license
+subject:: /req/core/collection_license
+test-purpose:: Validate that a RODEO EDR Profile API provides a collection links array with a license link.
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+In the `links` array, check that there exists one `link` object with `rel` set to `license`.
+--
+
+[.component,class=step]
+--
+Issue a HTTP GET request to the url in `href` for `link` with rel `license`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200 and the HTTP response header `Content-Type` is `text/html`.
+--
+
+=====
+
+====

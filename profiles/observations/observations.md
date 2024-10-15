@@ -79,25 +79,21 @@ Annotated example of a collection that complies with the profile
     ],
     "collections": [
       {
-        // Uniquely identify the collection within the scope of the service. Assume no structured data in the string.
-        // Alt1: WIS 2 topic notation? weather.surfaceobservations., weather.prediction.,
-        // Alt2: Reverse hostname notation?
-        // Alt3: Rodeo specific naming scheme? rodeo.surfaceobservations
-        // Alt4: WIGOS?
-        // Alt5: "surfaceobservations", enumerated list of allowed values.
         "id": "observations",
-        // Title SHALL be in a collection. Title SHALL have a maximum length of X words and be human readable. 
-        // Note: Acronyms, minimum length? UTF-8? Language?
-        "title": "Observations from E-SOH",
+        "title": "Surface observations from Europe",
         "links": [
           {
             "href": "https://api.esoh.met.no/collections/observations",
             "rel": "data"
+          },
+          {
+            "href": "https://creativecommons.org/licenses/by/4.0/",
+            "rel": "license",
+            "type": "text/html"
           }
         ],
         "extent": {
           "spatial": {
-            // BBOXs for this profile are never 3D, so this array must be an array with four float values.
             "bbox": [
               [
                 -73.12083,

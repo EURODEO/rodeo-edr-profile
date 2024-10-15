@@ -1,0 +1,9 @@
+[[req_core_collection_license]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_license*
+^|A |The `links` property in a `collection` SHALL contain a link to a license of its data.
+^|B |The license link SHALL set the `rel` property to `license`.
+^|C |The `type` property SHALL be set to `text/html`.
+^|D |If the data is open data, the license SHALL be `CC BY 4.0` and the `href` property set to `https://creativecommons.org/licenses/by/4.0/`.
+|===
