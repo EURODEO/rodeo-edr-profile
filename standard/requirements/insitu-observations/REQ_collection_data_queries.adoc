@@ -1,0 +1,6 @@
+[[req_insitu-observations_collection_data_queries]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/insitu-observations/collection_data_queries*
+^|A |A collection SHALL support locations, area and radius.
+|===

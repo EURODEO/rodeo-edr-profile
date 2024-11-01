@@ -2,11 +2,11 @@
 
 === Requirements Class "Insitu observations"
 
-include::../requirements/requirements_class_insitu_observations.adoc[]
+include::../requirements/requirements_class_insitu-observations.adoc[]
 
 
 === Collection data queries
 
 The types of data queries implemented in a collection.
 
-include::../requirements/insitu_observations/REQ_collection_data_queries.adoc[]
+include::../requirements/insitu-observations/REQ_collection_data_queries.adoc[]
