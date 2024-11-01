@@ -49,6 +49,8 @@ include::sections/clause_6_informative_text.adoc[]
 
 include::sections/clause_7_core.adoc[]
 
+include::sections/clause_8_insitu-observations.adoc[]
+
 include::sections/annex_a_ats.adoc[]
 
 include::sections/annex_b_schemas.adoc[]
