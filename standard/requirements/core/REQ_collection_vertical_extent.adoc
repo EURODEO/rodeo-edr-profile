@@ -1,0 +1,6 @@
+[[req_core_collection_vertical_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_vertical_extent*
+^|A |If `extent.vertical` is defined, the value of `extent.vertical.vrs` SHOULD be one the following values: `"Vertical pressure level in hPa", "Altitude above mean sea level in meters", "Height above land in meters", "Sigma level as fraction of pressure", "Hybrid level as combination of pressure and sigma"`.
+|===

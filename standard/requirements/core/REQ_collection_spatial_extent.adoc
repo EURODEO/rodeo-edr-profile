@@ -1,0 +1,9 @@
+[[req_core_collection_spatial_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_spatial_extent*
+^|A |The value of `extent.spatial.crs` SHALL be `ogc:crs84`.
+^|B |The value of `crs` SHALL include the element `ogc:crs84`.
+^|C |The value of `data_queries.*.crs_details` SHALL include an object whose `crs` value is `ogc:crs84`.
+^|D |If a collection supports more CRSs than `ogc:crs84`, these values SHOULD be presented on the syntax `epsg:<code>` in `crs` and  `data_queries.*.crs_details.crs` if an epsg code is available.
+|===
