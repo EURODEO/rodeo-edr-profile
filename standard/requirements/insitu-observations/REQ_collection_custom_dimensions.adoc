@@ -1,0 +1,10 @@
+[[req_core_collection_custom_dimensions]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_custom_dimensions*
+^|A | A collection can contain multiple parameters who fit under one standard_name. If such is the case, the collection MAY include a custom dimension with `id` of value `standard_names`.
+^|B | A collection can contain parameters that are identical except for having done measurements on different levels. If such is the case, the collection MAY include a custom dimension with `id` of value `levels`.
+^|C | Custom dimension `standard_names` must specify a list of supported standard names in `values`.
+^|D | Custom dimension `standard_names` SHALL specify `referencing` with value `https://vocab.nerc.ac.uk/standard_name/`.
+^|E | Custom dimension `levels` SHALL specify `referencing` with value `Height of measurement above ground level in meters`.
+|===
