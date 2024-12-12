@@ -46,3 +46,9 @@ include::../requirements/core/REQ_collection_spatial_extent.adoc[]
 CoverageJSON coordinate system metadata
 
 include::../requirements/core/REQ_coveragejson_referencing.adoc[]
+
+=== Collection vertical extent
+
+Vertical extent of a collction
+
+include::../requirements/core/REQ_collection_vertical_extent.adoc[]

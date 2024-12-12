@@ -2,8 +2,8 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/collection_spatial_extent*
-^|A |The value of `extent.spatial.crs` SHALL be `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
-^|B |The value of `crs` SHALL include the element `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
-^|C |The value of `data_queries.*.crs_details` SHALL include an object whose `crs` value is `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
-^|D |If a collection supports more CRSs than `http://www.opengis.net/def/crs/OGC/1.3/CRS84`, these values SHOULD be presented on the syntax `https://www.opengis.net/def/crs/EPSG/0/<code>` in `crs` and  `data_queries.*.crs_details.crs` if an epsg code is available.
+^|A |The value of `extent.spatial.crs` SHALL be `OGC:CRS84`.
+^|B |The value of `crs` SHALL include the element `OGC:CRS84`.
+^|C |The value of `data_queries.*.crs_details` SHALL include an object whose `crs` value is `OGC:CRS84`.
+^|D |If a collection supports more CRSs than `OGC:CRS84`, these values SHOULD be presented on the syntax `EPSG:<code>` in `crs` and  `data_queries.*.crs_details.crs` if an epsg code is available.
 |===

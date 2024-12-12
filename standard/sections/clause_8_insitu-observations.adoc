@@ -10,9 +10,3 @@ include::../requirements/requirements_class_insitu-observations.adoc[]
 The types of data queries implemented in a collection.
 
 include::../requirements/insitu-observations/REQ_collection_data_queries.adoc[]
-
-=== Collection vertical extent
-
-Vertical extent of a collction
-
-include::../requirements/insitu-observations/REQ_collection_vertical_extent.adoc[]

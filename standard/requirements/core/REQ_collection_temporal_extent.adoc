@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/collection_temporal_extent*
-^|A |The value of `extent.temporal.trs` SHALL be `http://www.opengis.net/def/uom/ISO-8601/0/Gregorian`.
+^|A |The value of `extent.temporal.trs` SHALL be `Gregorian`.
 |===
