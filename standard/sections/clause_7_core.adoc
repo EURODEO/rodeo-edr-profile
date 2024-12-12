@@ -27,3 +27,10 @@ include::../requirements/core/REQ_collection_title.adoc[]
 A license describes the usage permissions for the data in a collection.
 
 include::../requirements/core/REQ_collection_license.adoc[]
+
+=== Collection parameter names
+
+Parameter names is an object, containing parameter objects with metadata about all parameters the collection contains.
+
+include::../requirements/core/REQ_collection_parameter_names.adoc[]
+

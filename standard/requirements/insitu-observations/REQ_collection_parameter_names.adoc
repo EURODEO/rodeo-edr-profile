@@ -1,0 +1,8 @@
+[[req_insitu-observations_collection_parameter_names]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/insitu-observations/collection_parameter_names*
+^|A |If the collection has a custom dimension `standard_name`, the collection SHALL specify `eumetnet:standard_name` with value set to the same value as the last segment in `observedProperty.id`.
+^|B |If the collection has a custom dimension `level`, the collection SHALL specify `eumetnet:level` and set the value to the level where the measurement occured.
+^|C | The collection SHALL specify `measurementType` and the `measurementType.method` SHOULD follow the CF-convention cell methods: https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html.
+|===
