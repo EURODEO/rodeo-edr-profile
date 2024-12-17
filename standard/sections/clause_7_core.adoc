@@ -51,4 +51,4 @@ include::../requirements/core/REQ_coveragejson_referencing.adoc[]
 
 Vertical extent of a collection
 
-include::../requirements/core/REQ_collection_vertical_extent.adoc[]
+include::../recommendations/core/REC_collection_vertical_extent.adoc[]
