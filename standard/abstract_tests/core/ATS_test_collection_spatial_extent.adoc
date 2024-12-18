@@ -30,7 +30,7 @@ In the `collections` array, check that the `crs` property is set to `OGC:CRS84` 
 
 [.component,class=step]
 --
-For each object in `collections` array, for each object in the `data_queries` array, if `crs_details` is specified, check that one of the objects in the `crs_details` array has a `crs`` property set to `OGC:CRS84`.
+For each object in `collections` array, for each object in the `data_queries` array, if `crs_details` is specified, check that one of the objects in the `crs_details` array has a `crs` property set to `OGC:CRS84`.
 --
 
 =====
