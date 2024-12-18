@@ -1,0 +1,6 @@
+[[rec_core_collection_vertical_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/collection_vertical_extent*
+^|A |If `extent.vertical` is defined, the value of `extent.vertical.vrs` SHOULD be one the following values: `Pressure level in hPa`, `Geopotential height in gpm`, `Geometrical altitude above mean sea level in meters`, `Height above ground in meters`, `Flight level`.
+|===

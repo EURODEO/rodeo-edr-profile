@@ -1,0 +1,43 @@
+[[ats_core_coveragejson_referencing]]
+====
+[%metadata]
+label:: /conf/core/coveragejson_referencing
+subject:: /req/core/coveragejson_referencing
+test-purpose:: Validate that a RODEO EDR Profile API provides temporal extent in the correct trs.
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+For each object in the `collections` array, for each object in `data_queries`, issue a GET request with no crs query parameter specified.
+--
+
+[.component,class=step]
+--
+Check that the response is a CoverageJSON document where each object of `type` `Coverage` contains a `domain.referencing` array which includes an object where `system.type` is set to `GeographicCRS` and `system.id` set to `OGC:CRS84`.
+--
+
+[.component,class=step]
+--
+For each object in the `collections` array, for each object in `data_queries`, issue a GET request for each `crs_details` object where `crs` query parameter set to the value in the `crs_details` object.
+--
+
+[.component,class=step]
+--
+Check that the response is a CoverageJSON object where `domain.referencing` includes an object where `system.type` is set to `GeographicCRS` and `system.id` is equal to the crs query parameter.
+--
+
+=====
+
+====

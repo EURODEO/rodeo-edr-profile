@@ -21,3 +21,15 @@ include::./core/ATS_test_collection_title.adoc[]
 ==== Collection license
 
 include::./core/ATS_test_collection_license.adoc[]
+
+==== Collection spatial extent
+
+include::./core/ATS_test_collection_spatial_extent.adoc[]
+
+==== Collection temporal extent
+
+include::./core/ATS_test_collection_temporal_extent.adoc[]
+
+==== CoverageJSON referencing
+
+include::./core/ATS_test_coveragejson_referencing.adoc[]
