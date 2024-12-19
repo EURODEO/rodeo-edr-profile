@@ -12,31 +12,31 @@ Annotated example of a landinpage response that complies with the profile
   "description": "Example observations API",
   "links": [
     {
-      "href": "https://api.example.com/",
+      "href": "https://example.org/api/",
       "rel": "self",
       "type": "application/json",
       "title": "Landing Page in JSON"
     },
     {
-      "href": "https://api.example.com/docs",
+      "href": "https://example.org/api/docs",
       "rel": "service-doc",
       "type": "text/html",
       "title": "API description in HTML"
     },
     {
-      "href": "https://api.example.com/openapi.json",
+      "href": "https://example.org/api/openapi.json",
       "rel": "service-desc",
       "type": "application/vnd.oai.openapi+json;version=3.1",
       "title": "API description in JSON"
     },
     {
-      "href": "https://api.example.com/conformance",
+      "href": "https://example.org/api/conformance",
       "rel": "conformance",
       "type": "application/json",
       "title": "Conformance Declaration in JSON"
     },
     {
-      "href": "https://api.example.com/collections",
+      "href": "https://example.org/api/collections",
       "rel": "data",
       "title": "Collections metadata in JSON"
     }
@@ -55,7 +55,7 @@ Annotated example of a landinpage response that complies with the profile
     "url": "https://eumetnet.eu/"
   },
   "contact": {
-    "email": "contact@example.com"
+    "email": "contact@example.org"
   }
 }
 ```
@@ -68,7 +68,7 @@ Annotated example of a collection that complies with the profile
 {
     "links": [
       {
-        "href": "https://api.example.com/collections",
+        "href": "https://example.org/api/collections",
         "rel": "self"
       }
     ],
@@ -78,7 +78,7 @@ Annotated example of a collection that complies with the profile
         "title": "Surface observations from Europe",
         "links": [
           {
-            "href": "https://api.example.com/collections/observations",
+            "href": "https://example.org/api/collections/observations",
             "rel": "data"
           },
           {
@@ -116,7 +116,7 @@ Annotated example of a collection that complies with the profile
         "data_queries": {
           "position": {
             "link": {
-              "href": "https://api.example.com/collections/observations/position",
+              "href": "https://example.org/api/collections/observations/position",
               "rel": "data",
               "variables": {
                 "query_type": "position",
@@ -128,7 +128,7 @@ Annotated example of a collection that complies with the profile
           },
           "area": {
             "link": {
-              "href": "https://api.example.com/collections/observations/area",
+              "href": "https://example.org/api/collections/observations/area",
               "rel": "data",
               "variables": {
                 "query_type": "area",
@@ -140,7 +140,7 @@ Annotated example of a collection that complies with the profile
           },
           "locations": {
             "link": {
-              "href": "https://api.example.com/collections/observations/locations",
+              "href": "https://example.org/api/collections/observations/locations",
               "rel": "data",
               "variables": {
                 "query_type": "locations",
