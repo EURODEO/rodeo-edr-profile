@@ -1,0 +1,6 @@
+[[req_core_collection_temporal_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_temporal_extent*
+^|A |The value of `extent.temporal.trs` SHALL be `Gregorian`.
+|===

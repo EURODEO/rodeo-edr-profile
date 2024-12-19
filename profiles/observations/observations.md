@@ -8,40 +8,35 @@ Annotated example of a landinpage response that complies with the profile
 
 ```json
 {
-  "title": "E-SOH EDR API",
-  "description": "The E-SOH EDR API",
+  "title": "Example observations API",
+  "description": "Example observations API",
   "links": [
     {
-      "href": "https://api.esoh.met.no/",
+      "href": "https://example.org/api/",
       "rel": "self",
       "type": "application/json",
       "title": "Landing Page in JSON"
     },
     {
-      "href": "https://api.esoh.met.no/docs",
+      "href": "https://example.org/api/docs",
       "rel": "service-doc",
       "type": "text/html",
       "title": "API description in HTML"
     },
-    // Landingpage SHALL have a link to openapi describing the service.
-    // Note: Each "service" pr. openapi? MIME type for openapi.
     {
-      "href": "https://api.esoh.met.no/openapi.json",
+      "href": "https://example.org/api/openapi.json",
       "rel": "service-desc",
-      "type": "application/json",
+      "type": "application/vnd.oai.openapi+json;version=3.1",
       "title": "API description in JSON"
     },
-
-    // Conformance response SHALL have uri to RODEO profile. 
-    // Note: Add an conformance response example with this rule.
     {
-      "href": "https://api.esoh.met.no/conformance",
+      "href": "https://example.org/api/conformance",
       "rel": "conformance",
       "type": "application/json",
       "title": "Conformance Declaration in JSON"
     },
     {
-      "href": "https://api.esoh.met.no/collections",
+      "href": "https://example.org/api/collections",
       "rel": "data",
       "title": "Collections metadata in JSON"
     }
@@ -56,11 +51,11 @@ Annotated example of a landinpage response that complies with the profile
     "radiation"
   ],
   "provider": {
-    "name": "RODEO",
-    "url": "https://rodeo-project.eu/"
+    "name": "EUMETNET",
+    "url": "https://eumetnet.eu/"
   },
   "contact": {
-    "email": "rodeoproject@fmi.fi"
+    "email": "contact@example.org"
   }
 }
 ```
@@ -73,7 +68,7 @@ Annotated example of a collection that complies with the profile
 {
     "links": [
       {
-        "href": "https://api.esoh.met.no/collections",
+        "href": "https://example.org/api/collections",
         "rel": "self"
       }
     ],
@@ -83,7 +78,7 @@ Annotated example of a collection that complies with the profile
         "title": "Surface observations from Europe",
         "links": [
           {
-            "href": "https://api.esoh.met.no/collections/observations",
+            "href": "https://example.org/api/collections/observations",
             "rel": "data"
           },
           {
@@ -121,7 +116,7 @@ Annotated example of a collection that complies with the profile
         "data_queries": {
           "position": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/position",
+              "href": "https://example.org/api/collections/observations/position",
               "rel": "data",
               "variables": {
                 "query_type": "position",
@@ -133,7 +128,7 @@ Annotated example of a collection that complies with the profile
           },
           "area": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/area",
+              "href": "https://example.org/api/collections/observations/area",
               "rel": "data",
               "variables": {
                 "query_type": "area",
@@ -145,7 +140,7 @@ Annotated example of a collection that complies with the profile
           },
           "locations": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/locations",
+              "href": "https://example.org/api/collections/observations/locations",
               "rel": "data",
               "variables": {
                 "query_type": "locations",
