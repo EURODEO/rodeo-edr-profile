@@ -1,7 +1,7 @@
 {
     "links": [
       {
-        "href": "https://api.esoh.met.no/collections",
+        "href": "https://example.org/api/collections",
         "rel": "self"
       }
     ],
@@ -10,7 +10,7 @@
         "id": "observations",
         "links": [
           {
-            "href": "https://api.esoh.met.no/collections/observations",
+            "href": "https://example.org/api/collections/observations",
             "rel": "data"
           }
         ],
@@ -42,7 +42,7 @@
         "data_queries": {
           "position": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/position",
+              "href": "https://example.org/api/collections/observations/position",
               "rel": "data",
               "variables": {
                 "query_type": "position",
@@ -54,7 +54,7 @@
           },
           "area": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/area",
+              "href": "https://example.org/api/collections/observations/area",
               "rel": "data",
               "variables": {
                 "query_type": "area",
@@ -66,7 +66,7 @@
           },
           "locations": {
             "link": {
-              "href": "https://api.esoh.met.no/collections/observations/locations",
+              "href": "https://example.org/api/collections/observations/locations",
               "rel": "data",
               "variables": {
                 "query_type": "locations",

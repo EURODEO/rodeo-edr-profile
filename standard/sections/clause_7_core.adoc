@@ -28,9 +28,33 @@ A license describes the usage permissions for the data in a collection.
 
 include::../requirements/core/REQ_collection_license.adoc[]
 
+
+=== Collection temporal extent
+
+Temporal extent of a collction
+
+include::../requirements/core/REQ_collection_temporal_extent.adoc[]
+
+=== Collection spatial extent
+
+Spatial extent of a collction
+
+include::../requirements/core/REQ_collection_spatial_extent.adoc[]
+
+=== CoverageJSON referencing
+
+CoverageJSON coordinate system metadata
+
+include::../requirements/core/REQ_coveragejson_referencing.adoc[]
+
+=== Collection vertical extent
+
+Vertical extent of a collection
+
+include::../recommendations/core/REC_collection_vertical_extent.adoc[]
+
 === Collection parameter names
 
 Parameter names is an object, containing parameter objects with metadata about all parameters the collection contains.
 
 include::../requirements/core/REQ_collection_parameter_names.adoc[]
-
