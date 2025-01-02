@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/insitu-observations/collection_parameter_names*
-^|A |If the collection has a custom dimension `standard_name`, the collection SHALL specify `eumetnet:standard_name` with value set to the same value as the last segment in `observedProperty.id`.
-^|B |If the collection has a custom dimension `level`, the collection SHALL specify `eumetnet:level` and set the value to the level where the measurement occured.
-^|C | The collection SHALL specify `measurementType` and the `measurementType.method` SHOULD follow the CF-convention cell methods: https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html.
+^|A |If the collection has a custom dimension `standard_names`, each object in `parameter_names` SHALL specify a property `eumetnet:standard_name` with value set to one of the values listed in `values` array for custom dimension with `id` with value `standard_names`.
+^|B |If the collection has a custom dimension `levels`, each object in `parameter_names` SHALL specify a property `eumetnet:level` with value set to one of the values listed in `values` array for custom dimension with `id` with value `levels`.
+^|C | Each object in `parameter_names` SHALL specify `measurementType` and the `measurementType.method` SHOULD follow the CF-convention cell methods https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html and use a value from the list in https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ape.html.
 |===

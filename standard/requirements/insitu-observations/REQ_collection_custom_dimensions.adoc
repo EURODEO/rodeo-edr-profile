@@ -2,9 +2,9 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/collection_custom_dimensions*
-^|A | A collection can contain multiple parameters who fit under one standard_name. If such is the case, the collection MAY include a custom dimension with `id` of value `standard_names`.
-^|B | A collection can contain parameters that are identical except for having done measurements on different levels. If such is the case, the collection MAY include a custom dimension with `id` of value `levels`.
-^|C | Custom dimension `standard_names` must specify a list of supported standard names in `values`.
-^|D | Custom dimension `standard_names` SHALL specify `referencing` with value `https://vocab.nerc.ac.uk/standard_name/`.
-^|E | Custom dimension `levels` SHALL specify `referencing` with value `Height of measurement above ground level in meters`.
+^|A | A collection can contain multiple parameters who fit under a standard name as defined by the CF metadata conventions. If such is the case, and you want to query the data using standard names, the the `custom_dimensions` array SHALL have an object with `id` of value `standard_names`.
+^|B | Custom dimension `standard_names` SHALL specify a list of only CF-conventions standard names in `values`.
+^|C | Custom dimension `standard_names` SHALL specify `reference` with value `https://vocab.nerc.ac.uk/standard_name/`.
+^|D | A collection can contain parameters that are identical except for having performed measurements on different heights. If such is the case, and you want to make it possible to differentiate the data queries on this, the collection SHALL include a custom dimension with `id` of value `levels`.
+^|E | Custom dimension `levels` SHALL specify `reference` with value `Height of measurement above ground level in meters`.
 |===

@@ -23,3 +23,10 @@ The custom dimensions for which you can query the collection.
 
 include::../requirements/insitu-observations/REQ_collection_custom_dimensions.adoc[]
 
+=== CoverageJSON parameters
+
+The metadata about parameters in CoverageJSON
+
+include::../requirements/insitu-observations/REQ_coveragejson_parameters.adoc[]
+
+

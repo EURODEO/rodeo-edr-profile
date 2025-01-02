@@ -1,0 +1,8 @@
+[[req_insitu-observations_coveragejson_parameters]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/insitu-observations/coveragejson_parameters*
+^|A | Each object in `parameters` in a `coverage` object SHALL have a property `eumetnet:measurementType`. This object SHALL have the same properties as `measurementType` in an object in `parameter_names` in a `collection`.
+^|B | Each object in `parameters` SHALL have a property `eumetnet:standard_name` if this is set in the corresponding object in `parameter_names` in the `collection`.
+^|C | Each object in `parameters` SHALL have a property `eumetnet:level` if this is set in the corresponding object in `parameter_names` in the `collection`.
+|===
