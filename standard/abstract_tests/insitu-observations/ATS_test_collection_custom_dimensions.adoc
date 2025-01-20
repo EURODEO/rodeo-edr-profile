@@ -1,0 +1,37 @@
+[[ats_insitu-observations_collection_custom_dimensions]]
+====
+[%metadata]
+label:: /conf/insitu-observations/collection_custom_dimensions
+subject:: /req/insitu-observations/collection_custom_dimensions
+test-purpose:: Validate that a RODEO EDR Insitu observations Profile API has requried custom dimensions.
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+Check that the `extent.custom` array has an object with property `id` set to `standard_names` and property `reference` set to `https://vocab.nerc.ac.uk/standard_name/`. 
+--
+
+[.component,class=step]
+--
+Check that the `extent.custom` array has an object with property `id` set to `levels` and property `reference` set to `Height of measurement above ground level in meters`.
+--
+
+[.component,class=step]
+--
+Check that the `extent.custom` array has an object with property `id` set to `levels`. 
+--
+
+=====
+
+====
