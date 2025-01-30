@@ -19,22 +19,7 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-Each object in `parameter_names` has the properties `eumetnet:standard_name` and `eumetnet:level`.
---
-
-[.component,class=step]
---
-Each object in `parameter_names` has the properties `eumetnet:standard_name` with the value of type string.
---
-
-[.component,class=step]
---
-Each object in `parameter_names` has the property `eumetnet:level` with a value of type number.
---
-
-[.component,class=step]
---
-Each object in `parameter_names` has the property `measurementType`.
+In the `collections` array in the returned document, check that each collection has a `data_queries` array containing at least `area`, `locations` and `radius`.
 --
 
 =====

@@ -19,7 +19,22 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-Check that the `extent.custom` array has an object with property `id` set to `standard_names` and property `reference` set to `https://vocab.nerc.ac.uk/standard_name/`. 
+For each object in the `collections` array, do the checks that follows.
+--
+
+[.component,class=step]
+--
+Each object in `parameter_names` has the properties `eumetnet:standard_name` with the value of type string.
+--
+
+[.component,class=step]
+--
+Each object in `parameter_names` has the property `eumetnet:level` with a value of type number.
+--
+
+[.component,class=step]
+--
+Each object in `parameter_names` has the property `measurementType`.
 --
 
 =====
