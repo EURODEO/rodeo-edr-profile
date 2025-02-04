@@ -1,0 +1,29 @@
+name: test build specification
+
+on:
+  pull_request:
+    paths:
+    - 'standard/**'
+
+env:
+  SPEC_FILE_BASENAME: rodeo-edr-profile-DRAFT
+
+jobs:
+  build-rodeo-edr-profile:
+    name: Generate documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y \
+          && sudo apt-get install -y pandoc \
+          && sudo gem install asciidoctor asciidoctor-pdf
+      - name: checkout repository
+        uses: actions/checkout@master
+      - name: build specification
+        run: |
+          mkdir -p /tmp/rodeo-edr-profile/standard/images \
+          && cd standard \
+          && asciidoctor --trace -o /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/rodeo-edr-profile/standard/${SPEC_FILE_BASENAME}.pdf index.adoc
