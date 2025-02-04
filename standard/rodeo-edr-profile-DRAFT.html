@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="copyright" content="Copyright © 2024 RODEO project">
+<meta name="copyright" content="Copyright © 2025 EUMETNET">
 <title>RODEO EDR Profile</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">The provision of Open Access to Public meteorological Data and Development of Shared federated Data Infrastructure for the Development of information Products and Services</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-12-19</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-02-04</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.1.0</p></td>
@@ -470,7 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">RODEO project partners<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright © 2024 RODEO project</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright © 2025 EUMETNET</p></td>
 </tr>
 </tbody>
 </table>
@@ -511,12 +511,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_collection_spatial_extent">7.7. Collection spatial extent</a></li>
 <li><a href="#_coveragejson_referencing">7.8. CoverageJSON referencing</a></li>
 <li><a href="#_collection_vertical_extent">7.9. Collection vertical extent</a></li>
+<li><a href="#_collection_parameter_names">7.10. Collection parameter names</a></li>
 </ul>
 </li>
 <li><a href="#_insitu_observations">8. Insitu observations</a>
 <ul class="sectlevel2">
 <li><a href="#_requirements_class_insitu_observations">8.1. Requirements Class "Insitu observations"</a></li>
 <li><a href="#_collection_data_queries">8.2. Collection data queries</a></li>
+<li><a href="#_collection_parameter_names_2">8.3. Collection parameter names</a></li>
+<li><a href="#_collection_custom_dimensions">8.4. Collection custom dimensions</a></li>
+<li><a href="#_coveragejson_parameters">8.5. CoverageJSON parameters</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
@@ -1266,6 +1270,62 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="_collection_parameter_names"><a class="anchor" href="#_collection_parameter_names"></a>7.10. Collection parameter names</h3>
+<div class="paragraph">
+<p>Parameter names is an object, containing parameter objects with metadata about all parameters the collection contains.</p>
+</div>
+<table id="req_core_collection_parameter_names" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/collection_parameter_names</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The keys in <code>parameter_names</code> and <code>id</code> in the parameter object SHALL NOT be used to convey structured metadata.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A <code>parameter</code> object SHALL specify the following fields: <code>label</code>, <code>description</code>, <code>unit</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>label</code> SHALL NOT have more than 50 characters.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>label</code> SHALL be written in English.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>unit</code> SHALL use QUDT as vocabulary, and <code>unit.symbol.type</code> SHALL be on the form <code>https://qudt.org/vocab/unit/&lt;unit&gt;</code> and <code>unit.symbol.value</code> SHALL be set to the value of <code>qudt:symbol</code> for that unit.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><code>observedProperty</code> SHALL use the CF-convention if a suitable value is available and set <code>observedProperty.id</code> to value <code>https://vocab.nerc.ac.uk/standard_name/&lt;standard_name&gt;</code> If not, use <code>observedProperty.description</code> to describe it.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1306,7 +1366,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/insitu-observations/collection_data_queries</strong></p>
 </div></div></td>
@@ -1315,6 +1375,132 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A collection SHALL support locations, area and radius.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_collection_parameter_names_2"><a class="anchor" href="#_collection_parameter_names_2"></a>8.3. Collection parameter names</h3>
+<div class="paragraph">
+<p>Parameter names is an object, containing parameter objects with metadata about all parameters the collection contains.</p>
+</div>
+<table id="req_insitu-observations_collection_parameter_names" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/insitu-observations/collection_parameter_names</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameter_names</code> SHALL specify a property <code>metocean:standard_name</code> with value set to one of the values listed in <code>values</code> array for custom dimension with <code>id</code> with value <code>standard_names</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameter_names</code> SHALL specify a property <code>metocean:level</code> with value set to one of the values listed in <code>values</code> array for custom dimension with <code>id</code> with value <code>levels</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameter_names</code> SHALL specify <code>measurementType</code> and the <code>measurementType.method</code> SHOULD follow the CF-convention cell methods <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html" class="bare">https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html</a> and use a value from the list in <a href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ape.html" class="bare">https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ape.html</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_collection_custom_dimensions"><a class="anchor" href="#_collection_custom_dimensions"></a>8.4. Collection custom dimensions</h3>
+<div class="paragraph">
+<p>The custom dimensions for which you can query the collection.</p>
+</div>
+<table id="req_core_collection_custom_dimensions" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/collection_custom_dimensions</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A collection can contain multiple parameters who fit under a standard name as defined by the CF metadata conventions. A collection SHALL have an object in <code>extent.custom</code> with <code>id</code> of value <code>standard_names</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Custom dimension object <code>standard_names</code> SHALL specify a list of CF-conventions standard names in <code>values</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Custom dimension <code>standard_names</code> SHALL specify <code>reference</code> with value <code><a href="https://vocab.nerc.ac.uk/standard_name/" class="bare">https://vocab.nerc.ac.uk/standard_name/</a></code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A collection can contain parameters that are identical except for having performed measurements on different heights. A collection SHALL have an object in <code>extent.custom</code> with <code>id</code> of value <code>levels</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Custom dimension <code>levels</code> SHALL specify <code>reference</code> with value <code>Height of measurement above ground level in meters</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_coveragejson_parameters"><a class="anchor" href="#_coveragejson_parameters"></a>8.5. CoverageJSON parameters</h3>
+<div class="paragraph">
+<p>The metadata about parameters in CoverageJSON</p>
+</div>
+<table id="req_insitu-observations_coveragejson_parameters" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/insitu-observations/coveragejson_parameters</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameters</code> in a <code>coverage</code> object SHALL have a property <code>metocean:measurementType</code>. This object SHALL have the same properties as <code>measurementType</code> in an object in <code>parameter_names</code> in a <code>collection</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameters</code> SHALL have a property <code>metocean:standard_name</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each object in <code>parameters</code> SHALL have a property <code>metocean:level</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1710,7 +1896,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a RODEO EDR Profile API provides temporal extent in the correct trs.</p>
+<p>Validate that a RODEO EDR Profile API CoverageJSON response document provides correct domain referencing values.</p>
 </dd>
 </dl>
 </div>
@@ -1959,7 +2145,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-12-19 16:32:45 UTC
+Last updated 2025-02-04 12:12:19 UTC
 </div>
 </div>
 </body>
