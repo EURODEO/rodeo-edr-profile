@@ -33,3 +33,7 @@ include::./core/ATS_test_collection_temporal_extent.adoc[]
 ==== CoverageJSON referencing
 
 include::./core/ATS_test_coveragejson_referencing.adoc[]
+
+==== Collection parameter names
+
+include::./core/ATS_test_collection_parameter_names.adoc[]

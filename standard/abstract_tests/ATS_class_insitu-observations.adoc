@@ -9,3 +9,15 @@ classification:: Target Type:Web API
 ==== Collection data queries
 
 include::./insitu-observations/ATS_test_collection_data_queries.adoc[]
+
+==== Collection parameter names
+
+include::./insitu-observations/ATS_test_collection_parameter_names.adoc[]
+
+==== Collection custom dimensions
+
+include::./insitu-observations/ATS_test_collection_custom_dimensions.adoc[]
+
+==== Coveragejson parameters
+
+include::./insitu-observations/ATS_test_coveragejson_parameters.adoc[]
