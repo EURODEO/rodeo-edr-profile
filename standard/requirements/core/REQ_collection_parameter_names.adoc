@@ -6,6 +6,6 @@
 ^|B |A `parameter` object SHALL specify the following fields: `label`, `description`, `unit`
 ^|C |`label` SHALL NOT have more than 50 characters.
 ^|D |`label` SHALL be written in English.
-^|E |`unit` SHALL use QUDT as vocabulary, and `unit.symbol.type` SHALL be on the form `https://qudt.org/vocab/unit/<unit>`.
+^|E |`unit` SHALL use QUDT as vocabulary, and `unit.symbol.type` SHALL be on the form `https://qudt.org/vocab/unit/<unit>` and `unit.symbol.value` SHALL be set to the value of `qudt:symbol` for that unit.
 ^|F |`observedProperty` SHALL use the CF-convention if a suitable value is available and set `observedProperty.id` to value `https://vocab.nerc.ac.uk/standard_name/<standard_name>` If not, use `observedProperty.description` to describe it.
 |===

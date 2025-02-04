@@ -33,6 +33,11 @@ The value of a `label` property in a `parameter` object is less than or equal to
 The value of `unit.symbol.type` in a `parameter` object is a url on the form `https://qudt.org/vocab/unit/{unit}`.
 --
 
+[.component,class=step]
+--
+The value of `unit.symbol.value` in a `parameter` object is specified.
+--
+
 =====
 
 ====

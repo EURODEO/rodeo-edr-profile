@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/insitu-observations/collection_parameter_names*
-^|A |Each object in `parameter_names` SHALL specify a property `eumetnet:standard_name` with value set to one of the values listed in `values` array for custom dimension with `id` with value `standard_names`.
-^|B |Each object in `parameter_names` SHALL specify a property `eumetnet:level` with value set to one of the values listed in `values` array for custom dimension with `id` with value `levels`.
+^|A |Each object in `parameter_names` SHALL specify a property `metocean:standard_name` with value set to one of the values listed in `values` array for custom dimension with `id` with value `standard_names`.
+^|B |Each object in `parameter_names` SHALL specify a property `metocean:level` with value set to one of the values listed in `values` array for custom dimension with `id` with value `levels`.
 ^|C | Each object in `parameter_names` SHALL specify `measurementType` and the `measurementType.method` SHOULD follow the CF-convention cell methods https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch07s03.html and use a value from the list in https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ape.html.
 |===

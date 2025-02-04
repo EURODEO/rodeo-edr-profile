@@ -19,22 +19,22 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-For each object in the `collections` array, for each object in `data_queries`, issue a GET request with no crs query parameter specified.
+For each object in the `collections` array and for each object in `data_queries`, issue a GET request with no crs query parameter specified.
 --
 
 [.component,class=step]
 --
-Check that each object in `parameters` array of the response CoverageJSON document contains a property `eumetnet:standard_name` with a string type.
+Check that each object in `parameters` array of the response CoverageJSON document contains a property `metocean:standard_name` with a string type.
 --
 
 [.component,class=step]
 --
-Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `eumetnet:level` with a number type.
+Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `metocean:level` with a number type.
 --
 
 [.component,class=step]
 --
-Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `eumetnet:measurementType` which has an object type. Check that this object has the property `method` of type string and property `duration` of type string.
+Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `metocean:measurementType` which has an object type. Check that this object has the property `method` of type string and property `duration` of type string.
 --
 
 =====

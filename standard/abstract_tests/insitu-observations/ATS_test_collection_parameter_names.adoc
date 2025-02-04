@@ -3,7 +3,8 @@
 [%metadata]
 label:: /conf/insitu-observations/collection_parameter_names
 subject:: /req/insitu-observations/collection_parameter_names
-test-purpose:: Validate that a RODEO EDR Insitu observations Profile API has requried custom dimensions.
+test-purpose:: Validate that a RODEO EDR Insitu observations Profile API has the required properties for parameter_names
+
 [.component,class=test method]
 =====
 
@@ -19,22 +20,17 @@ Check that the value of the returned HTTP status header is 200.
 
 [.component,class=step]
 --
-For each object in the `collections` array, do the checks that follows.
+For each object in the `collections` array and for each object in `parameter_names` check that it has the properties `metocean:standard_name` with the value of type string.
 --
 
 [.component,class=step]
 --
-Each object in `parameter_names` has the properties `eumetnet:standard_name` with the value of type string.
+For each object in the `collections` array and for each object in `parameter_names` check that it has the property `metocean:level` with a value of type number.
 --
 
 [.component,class=step]
 --
-Each object in `parameter_names` has the property `eumetnet:level` with a value of type number.
---
-
-[.component,class=step]
---
-Each object in `parameter_names` has the property `measurementType`.
+For each object in the `collections` array and for each object in `parameter_names` check that is has the property `measurementType`.
 --
 
 =====
