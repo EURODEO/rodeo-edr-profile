@@ -1,0 +1,10 @@
+[[req_core_collection_custom_dimensions]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/collection_custom_dimensions*
+^|A | A collection can contain multiple parameters who fit under a standard name as defined by the CF metadata conventions. A collection SHALL have an object in `extent.custom` with `id` of value `standard_names`.
+^|B | Custom dimension object `standard_names` SHALL specify a list of CF-conventions standard names in `values`.
+^|C | Custom dimension `standard_names` SHALL specify `reference` with value `https://vocab.nerc.ac.uk/standard_name/`.
+^|D | A collection can contain parameters that are identical except for having performed measurements on different heights. A collection SHALL have an object in `extent.custom` with `id` of value `levels`.
+^|E | Custom dimension `levels` SHALL specify `reference` with value `Height of measurement above ground level in meters`.
+|===

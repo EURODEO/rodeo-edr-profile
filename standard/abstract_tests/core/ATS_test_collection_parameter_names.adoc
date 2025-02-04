@@ -1,0 +1,43 @@
+[[ats_core_collection_parameter_names]]
+====
+[%metadata]
+label:: /conf/core/collection_parameter_names
+subject:: /req/core/collection_parameter_names
+test-purpose:: Validate that a RODEO EDR Profile API provides a valid collection parameter_names
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+In the response document, for each object in the `collections` array, check that each object in the `parameter_names` array has the properties `label`, `unit` and `description`.
+--
+
+[.component,class=step]
+--
+The value of a `label` property in a `parameter` object is less than or equal to 50 characters.
+--
+
+[.component,class=step]
+--
+The value of `unit.symbol.type` in a `parameter` object is a url on the form `https://qudt.org/vocab/unit/{unit}`.
+--
+
+[.component,class=step]
+--
+The value of `unit.symbol.value` in a `parameter` object is specified.
+--
+
+=====
+
+====

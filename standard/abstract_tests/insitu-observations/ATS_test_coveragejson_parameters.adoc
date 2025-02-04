@@ -1,0 +1,42 @@
+[[ats_insitu-observations_coveragejson_parameters]]
+====
+[%metadata]
+label:: /conf/insitu-observations/coveragejson_parameters
+subject:: /req/insitu-observations/coveragejson_parameters
+test-purpose:: Validate that a RODEO EDR Insitu observations Profile API has required metadata in coveragejson parameters.
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Issue an HTTP GET request to path `/collections`.
+--
+
+[.component,class=step]
+--
+Check that the value of the returned HTTP status header is 200.
+--
+
+[.component,class=step]
+--
+For each object in the `collections` array and for each object in `data_queries`, issue a GET request with no crs query parameter specified.
+--
+
+[.component,class=step]
+--
+Check that each object in `parameters` array of the response CoverageJSON document contains a property `metocean:standard_name` with a string type.
+--
+
+[.component,class=step]
+--
+Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `metocean:level` with a number type.
+--
+
+[.component,class=step]
+--
+Check that each `parameter` object in `parameters` in the response CoverageJSON document contains a property `metocean:measurementType` which has an object type. Check that this object has the property `method` of type string and property `duration` of type string.
+--
+
+=====
+
+====

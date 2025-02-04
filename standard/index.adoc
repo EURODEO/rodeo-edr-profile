@@ -2,7 +2,7 @@
 :titletext: {title}
 :version: 0.1.0
 :date: {docdate}
-:copyright: Copyright © 2024 RODEO project
+:copyright: Copyright © 2025 EUMETNET
 :doctype: book
 :encoding: utf-8
 :lang: en

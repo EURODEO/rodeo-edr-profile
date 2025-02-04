@@ -52,3 +52,9 @@ include::../requirements/core/REQ_coveragejson_referencing.adoc[]
 Vertical extent of a collection
 
 include::../recommendations/core/REC_collection_vertical_extent.adoc[]
+
+=== Collection parameter names
+
+Parameter names is an object, containing parameter objects with metadata about all parameters the collection contains.
+
+include::../requirements/core/REQ_collection_parameter_names.adoc[]
