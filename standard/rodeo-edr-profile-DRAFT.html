@@ -534,11 +534,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_collection_spatial_extent_2">A.1.5. Collection spatial extent</a></li>
 <li><a href="#_collection_temporal_extent_2">A.1.6. Collection temporal extent</a></li>
 <li><a href="#_coveragejson_referencing_2">A.1.7. CoverageJSON referencing</a></li>
+<li><a href="#_collection_parameter_names_3">A.1.8. Collection parameter names</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_insitu_observations">A.2. Conformance Class: Insitu observations</a>
 <ul class="sectlevel3">
 <li><a href="#_collection_data_queries_2">A.2.1. Collection data queries</a></li>
+<li><a href="#_collection_parameter_names_4">A.2.2. Collection parameter names</a></li>
+<li><a href="#_collection_custom_dimensions_2">A.2.3. Collection custom dimensions</a></li>
+<li><a href="#_coveragejson_parameters_2">A.2.4. Coveragejson parameters</a></li>
 </ul>
 </li>
 </ul>
@@ -1949,6 +1953,75 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_collection_parameter_names_3"><a class="anchor" href="#_collection_parameter_names_3"></a>A.1.8. Collection parameter names</h4>
+<div id="ats_core_collection_parameter_names" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/core/collection_parameter_names</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/core/collection_parameter_names</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a RODEO EDR Profile API provides a valid collection parameter_names</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request to path <code>/collections</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>In the response document, for each object in the <code>collections</code> array, check that each object in the <code>parameter_names</code> array has the properties <code>label</code>, <code>unit</code> and <code>description</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>The value of a <code>label</code> property in a <code>parameter</code> object is less than or equal to 50 characters.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>The value of <code>unit.symbol.type</code> in a <code>parameter</code> object is a url on the form <code><a href="https://qudt.org/vocab/unit/{unit}" class="bare">https://qudt.org/vocab/unit/{unit}</a></code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>The value of <code>unit.symbol.value</code> in a <code>parameter</code> object is specified.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_conformance_class_insitu_observations"><a class="anchor" href="#_conformance_class_insitu_observations"></a>A.2. Conformance Class: Insitu observations</h3>
@@ -2012,6 +2085,192 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 <div class="content">
 <div class="paragraph">
 <p>In the <code>collections</code> array in the returned document, check that each collection has a <code>data_queries</code> array containing at least <code>area</code>, <code>locations</code> and <code>radius</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_collection_parameter_names_4"><a class="anchor" href="#_collection_parameter_names_4"></a>A.2.2. Collection parameter names</h4>
+<div id="ats_insitu-observations_collection_parameter_names" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/insitu-observations/collection_parameter_names</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/insitu-observations/collection_parameter_names</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a RODEO EDR Insitu observations Profile API has the required properties for parameter_names</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request to path <code>/collections</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>For each object in the <code>collections</code> array and for each object in <code>parameter_names</code> check that it has the properties <code>metocean:standard_name</code> with the value of type string.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>For each object in the <code>collections</code> array and for each object in <code>parameter_names</code> check that it has the property <code>metocean:level</code> with a value of type number.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>For each object in the <code>collections</code> array and for each object in <code>parameter_names</code> check that is has the property <code>measurementType</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_collection_custom_dimensions_2"><a class="anchor" href="#_collection_custom_dimensions_2"></a>A.2.3. Collection custom dimensions</h4>
+<div id="ats_insitu-observations_collection_custom_dimensions" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/insitu-observations/collection_custom_dimensions</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/insitu-observations/collection_custom_dimensions</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a RODEO EDR Insitu observations Profile API has required custom dimensions.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request to path <code>/collections</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>extent.custom</code> array has an object with property <code>id</code> set to <code>standard_names</code> and property <code>reference</code> set to <code><a href="https://vocab.nerc.ac.uk/standard_name/" class="bare">https://vocab.nerc.ac.uk/standard_name/</a></code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>extent.custom</code> array has an object with property <code>id</code> set to <code>levels</code> and property <code>reference</code> set to <code>Height of measurement above ground level in meters</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_coveragejson_parameters_2"><a class="anchor" href="#_coveragejson_parameters_2"></a>A.2.4. Coveragejson parameters</h4>
+<div id="ats_insitu-observations_coveragejson_parameters" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/insitu-observations/coveragejson_parameters</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/insitu-observations/coveragejson_parameters</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a RODEO EDR Insitu observations Profile API has required metadata in coveragejson parameters.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Issue an HTTP GET request to path <code>/collections</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of the returned HTTP status header is 200.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>For each object in the <code>collections</code> array and for each object in <code>data_queries</code>, issue a GET request with no crs query parameter specified.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each object in <code>parameters</code> array of the response CoverageJSON document contains a property <code>metocean:standard_name</code> with a string type.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each <code>parameter</code> object in <code>parameters</code> in the response CoverageJSON document contains a property <code>metocean:level</code> with a number type.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each <code>parameter</code> object in <code>parameters</code> in the response CoverageJSON document contains a property <code>metocean:measurementType</code> which has an object type. Check that this object has the property <code>method</code> of type string and property <code>duration</code> of type string.</p>
 </div>
 </div>
 </div>
@@ -2145,7 +2404,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-04 12:12:19 UTC
+Last updated 2025-02-04 12:29:28 UTC
 </div>
 </div>
 </body>
